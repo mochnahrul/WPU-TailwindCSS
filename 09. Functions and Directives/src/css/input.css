@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-6xl;
+  }
+}
+
+@layer components {
+  .grid-card {
+    @apply relative aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg hover:scale-95 transition-all duration-500 overflow-hidden;
+  }
+  .grid-card-img {
+    @apply w-full h-full absolute object-cover object-center group-hover:scale-125 group-hover:rotate-6 transition-all duration-500;
+  }
+}

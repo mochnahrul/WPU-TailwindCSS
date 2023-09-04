@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind CSS - Grid</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              inter: ["Inter"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-inter">
+    <div class="wrapper grid grid-cols-2 md:grid-cols-4 gap-2 p-2 my-10 mx-auto">
+      <div class="h-15 flex text-md font-semibold text-slate-700 md:row-start-2 md:col-start-4"><p class="self-center">Mochamad Nahrul Hayawan</p></div>
+      <div class="h-15 flex text-md font-semibold text-slate-700 md:row-start-2 md:col-start-2"><p class="self-end">@mochnahrul</p></div>
+      <div class="h-15 relative aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg hover:scale-95 transition-all duration-500 overflow-hidden group">
+        <img src="https://source.unsplash.com/600x400?earth" alt="image" class="w-full h-full absolute object-cover object-center group-hover:scale-125 group-hover:rotate-6 transition-all duration-500" />
+      </div>
+      <div class="h-15 relative aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] md:col-start-3 rounded-lg hover:scale-95 transition-all duration-500 overflow-hidden group">
+        <img src="https://source.unsplash.com/600x400?moon" alt="image" class="w-full h-full absolute object-cover object-center group-hover:scale-125 group-hover:rotate-6 transition-all duration-500" />
+      </div>
+      <div class="h-15 relative aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg hover:scale-95 transition-all duration-500 overflow-hidden group">
+        <img src="https://source.unsplash.com/600x400?mars" alt="image" class="w-full h-full absolute object-cover object-center group-hover:scale-125 group-hover:rotate-6 transition-all duration-500" />
+      </div>
+      <div class="h-15 relative aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg hover:scale-95 transition-all duration-500 overflow-hidden group">
+        <img src="https://source.unsplash.com/600x400?saturn" alt="image" class="w-full h-full absolute object-cover object-center group-hover:scale-125 group-hover:rotate-6 transition-all duration-500" />
+      </div>
+      <div class="h-15 relative aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg hover:scale-95 transition-all duration-500 overflow-hidden group">
+        <img src="https://source.unsplash.com/600x400?neptune" alt="image" class="w-full h-full absolute object-cover object-center group-hover:scale-125 group-hover:rotate-6 transition-all duration-500" />
+      </div>
+      <div class="h-15 relative aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] md:col-start-2 rounded-lg hover:scale-95 transition-all duration-500 overflow-hidden group">
+        <img src="https://source.unsplash.com/600x400?mercury" alt="image" class="w-full h-full absolute object-cover object-center group-hover:scale-125 group-hover:rotate-6 transition-all duration-500" />
+      </div>
+      <div class="h-15 relative aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] md:col-start-4 rounded-lg hover:scale-95 transition-all duration-500 overflow-hidden group">
+        <img src="https://source.unsplash.com/600x400?venus" alt="image" class="w-full h-full absolute object-cover object-center group-hover:scale-125 group-hover:rotate-6 transition-all duration-500" />
+      </div>
+      <div class="h-15 relative aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg hover:scale-95 transition-all duration-500 overflow-hidden group">
+        <img src="https://source.unsplash.com/600x400?jupiter" alt="image" class="w-full h-full absolute object-cover object-center group-hover:scale-125 group-hover:rotate-6 transition-all duration-500" />
+      </div>
+      <div class="h-15 relative aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] md:col-start-3 rounded-lg hover:scale-95 transition-all duration-500 overflow-hidden group">
+        <img src="https://source.unsplash.com/600x400?astronaut" alt="image" class="w-full h-full absolute object-cover object-center group-hover:scale-125 group-hover:rotate-6 transition-all duration-500" />
+      </div>
+      <div class="h-15 relative aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] md:col-start-3 rounded-lg hover:scale-95 transition-all duration-500 overflow-hidden group">
+        <img src="https://source.unsplash.com/600x400?sun" alt="image" class="w-full h-full absolute object-cover object-center group-hover:scale-125 group-hover:rotate-6 transition-all duration-500" />
+      </div>
+    </div>
+  </body>
+</html>

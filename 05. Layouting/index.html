@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind CSS - Layouting</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              inter: ["Inter"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-inter">
+    <div class="container relative my-10 mx-auto">
+      <div class="flex w-10 h-10 bg-gradient-to-br from-sky-500 to-slate-500 rounded-full absolute -top-5 left-1/2 -translate-x-1/2"><span class="m-auto">🚀</span></div>
+      <div class="border rounded-lg shadow-lg p-10">
+        <img src="https://source.unsplash.com/600x400?mars" alt="image" class="w-52 rounded-lg float-left mr-2" />
+        <p class="text-sm">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum voluptatem et beatae expedita quidem! Architecto reiciendis quasi suscipit nostrum ut autem ab nemo vero velit accusamus fugiat totam dolore veniam et optio amet
+          voluptatibus qui sint natus, consequuntur ipsum itaque dolores beatae iusto? Ex sapiente repellat sed suscipit. In, magnam.
+        </p>
+      </div>
+    </div>
+
+    <div class="container border rounded-lg shadow-lg columns-3 p-10 my-10 mx-auto">
+      <img src="https://source.unsplash.com/600x400?mercury" alt="image" class="mb-2" />
+      <img src="https://source.unsplash.com/600x400?venus" alt="image" />
+      <img src="https://source.unsplash.com/600x400?earth" alt="image" class="mb-2" />
+      <img src="https://source.unsplash.com/600x400?jupiter" alt="image" />
+      <img src="https://source.unsplash.com/600x400?saturn" alt="image" class="mb-2" />
+      <img src="https://source.unsplash.com/600x400?uranus" alt="image" />
+    </div>
+  </body>
+</html>

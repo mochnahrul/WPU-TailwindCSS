@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind CSS - Basic Utility</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            spacing: {
+              13: "3.25rem",
+            },
+            fontFamily: {
+              inter: ["Inter"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-inter">
+    <h1 class="text-6xl font-bold bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text text-transparent text-center mb-10">Mari Belajar TailwindCSS</h1>
+
+    <section class="mb-10">
+      <h2 class="text-lg font-semibold bg-gradient-to-r from-green-500 to-emerald-500 bg-clip-text text-transparent text-center mb-5">Spacing</h2>
+      <div class="flex bg-gradient-to-br from-indigo-200 via-red-400 to-yellow-300 w-1/2 h-24 mx-auto mb-5">
+        <span class="m-auto">Margin</span>
+      </div>
+      <div class="bg-slate-500 text-center p-13">Padding</div>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-lg font-semibold bg-gradient-to-r from-green-500 to-emerald-500 bg-clip-text text-transparent text-center mb-5">Sizing</h2>
+      <div class="flex bg-slate-500 w-32 h-32 mx-auto">
+        <span class="m-auto">Kotak 1</span>
+      </div>
+    </section>
+
+    <section class="mb-10 max-w-3xl">
+      <h2 class="text-4xl font-bold mb-2">Belajar Mengenal Typography pada TailwindCSS</h2>
+      <div class="text-sm text-gray-500 mb-5">By <span class="font-semibold">Mochamad Nahrul</span> - 21/4/2023</div>
+      <p class="mb-2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime eum magnam, blanditiis, incidunt id ab iusto vitae quisquam quam facere voluptatem optio doloremque. Atque accusantium illo laudantium porro! Blanditiis fuga enim
+        voluptate natus ullam! Cumque architecto perspiciatis pariatur atque minus, ipsum, necessitatibus sequi quam unde vel quaerat error excepturi expedita.
+      </p>
+      <blockquote class="font-light italic mb-2">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos natus praesentium distinctio quod officia aperiam asperiores incidunt, alias quaerat possimus!"</blockquote>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis id nisi consectetur sequi doloribus necessitatibus doloremque enim quia delectus qui ipsum temporibus dolore ullam tenetur repudiandae commodi tempora illo, eius
+        animi. Quia ipsum itaque aliquid. Similique illum nobis quis, consectetur totam libero, sunt exercitationem neque itaque id, recusandae numquam omnis!
+      </p>
+    </section>
+
+    <div class="bg-slate-500 bg-fixed bg-cover w-[400px] h-[300px] overflow-y-scroll mx-auto mb-10" style="background-image: url(https://source.unsplash.com/1000x600?computer)">
+      <p class="font-semibold text-emerald-400 p-5">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis quo a cum et fugit harum, tempore minus quidem, corrupti dolore asperiores at accusantium ratione commodi aut amet impedit, laborum doloremque beatae. Similique sunt
+        voluptates quae ipsam vero modi qui, repellendus possimus eveniet, ipsum officia quo voluptatum nisi expedita sequi cum laudantium dolorum quisquam iste at provident molestiae libero quaerat ad? Eaque recusandae debitis accusantium
+        eligendi voluptate animi maxime? Eligendi ratione eos aliquid vero, ad ex inventore sunt natus ut deleniti est accusantium repellat architecto officiis dolore, enim aliquam et id dolor, perspiciatis temporibus nobis! Inventore
+        debitis ipsa suscipit voluptatum quaerat?
+      </p>
+    </div>
+
+    <div class="bg-slate-500 bg-fixed bg-cover w-[400px] h-[300px] rounded-xl overflow-hidden mx-auto mb-10" style="background-image: url(https://source.unsplash.com/1000x600?laptop)">
+      <div class="bg-rose-600 w-full h-full mix-blend-screen"></div>
+    </div>
+
+    <div class="flex bg-slate-500 bg-fixed bg-cover w-[400px] h-[300px] rounded-xl overflow-hidden mx-auto mb-10" style="background-image: url(https://source.unsplash.com/1000x600?car)">
+      <div class="bg-white/30 w-52 h-52 mix-blend-screen backdrop-blur-sm rounded-xl m-auto"></div>
+    </div>
+  </body>
+</html>
