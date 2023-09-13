@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Tailwind CSS</title>
+    <link href="dist/final.css" rel="stylesheet" />
+
+    <script>
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header
+      class="fixed left-0 top-0 z-10 flex w-full items-center justify-start bg-transparent"
+    >
+      <div class="container">
+        <div class="relative flex items-center justify-between">
+          <div class="px-3">
+            <a
+              class="block py-3 text-2xl font-bold text-primary md:text-4xl lg:text-2xl"
+              href="#hero"
+              >Wawan</a
+            >
+          </div>
+          <div class="flex items-center justify-start px-3">
+            <button
+              class="absolute right-3 block lg:hidden"
+              id="hamburger"
+              name="hamburger"
+              type="button"
+            >
+              <span
+                class="hamburger-line origin-top-left transition duration-200 ease-in-out"
+              ></span>
+              <span
+                class="hamburger-line transition duration-200 ease-in-out"
+              ></span>
+              <span
+                class="hamburger-line origin-bottom-left transition duration-200 ease-in-out"
+              ></span>
+            </button>
+
+            <nav
+              class="absolute right-3 top-full hidden w-full max-w-[250px] rounded-lg border border-secondary border-opacity-50 bg-white p-3 dark:bg-dark lg:static lg:block lg:max-w-full lg:rounded-none lg:border-none lg:bg-transparent lg:dark:bg-transparent"
+              id="navbar-menu"
+            >
+              <ul class="flex flex-col lg:flex-row lg:gap-x-3">
+                <li class="group py-2 lg:p-2">
+                  <a
+                    class="text-base text-dark group-hover:text-primary dark:text-white"
+                    href="#hero"
+                    >Home</a
+                  >
+                </li>
+                <li class="group py-2 lg:p-2">
+                  <a
+                    class="text-base text-dark group-hover:text-primary dark:text-white"
+                    href="#about"
+                    >About</a
+                  >
+                </li>
+                <li class="group py-2 lg:p-2">
+                  <a
+                    class="text-base text-dark group-hover:text-primary dark:text-white"
+                    href="#portfolio"
+                    >Portfolio</a
+                  >
+                </li>
+                <li class="group py-2 lg:p-2">
+                  <a
+                    class="text-base text-dark group-hover:text-primary dark:text-white"
+                    href="#contact"
+                    >Contact</a
+                  >
+                </li>
+                <li class="py-2 lg:p-2">
+                  <div class="flex flex-row gap-x-2">
+                    <span class="text-sm text-dark dark:text-white">Light</span>
+                    <input class="hidden" id="dark-toggle" type="checkbox" />
+                    <label for="dark-toggle">
+                      <div
+                        class="flex h-5 w-10 cursor-pointer items-center rounded-full bg-secondary p-1"
+                      >
+                        <div
+                          class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-200 ease-in-out"
+                        ></div>
+                      </div>
+                    </label>
+                    <span class="text-sm text-dark dark:text-white">Dark</span>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- End of Header -->
+
+    <!-- Hero -->
+    <section class="hero flex min-h-screen dark:bg-dark" id="hero">
+      <div class="container my-auto">
+        <div
+          class="flex flex-col-reverse items-center justify-start gap-y-6 pb-12 pt-24 lg:flex-row lg:gap-x-12"
+        >
+          <div class="w-full px-3 lg:w-1/2">
+            <div class="flex flex-col gap-y-4 lg:gap-y-6">
+              <h1>
+                <span
+                  class="block text-2xl font-medium text-primary md:text-4xl"
+                  >Hi there 👋
+                  <span
+                    class="block text-4xl font-bold text-dark dark:text-white md:text-5xl"
+                    >I am Wawan</span
+                  ></span
+                >
+                <span
+                  class="block text-2xl font-semibold text-secondary md:text-4xl"
+                  >Peregrinus</span
+                >
+              </h1>
+              <p
+                class="text-lg font-normal leading-relaxed text-secondary md:text-2xl lg:text-lg"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Commodi, maxime. Eum, fugit. Maiores minus officia voluptatum
+                necessitatibus aut laudantium facilis.
+              </p>
+              <a
+                class="self-start rounded-md bg-primary px-4 py-2 text-base font-medium text-white transition duration-200 ease-in-out hover:opacity-80 md:text-lg lg:text-base"
+                href="#"
+                >Contact me</a
+              >
+            </div>
+          </div>
+          <div class="w-1/2 px-3 lg:w-1/3">
+            <div class="overflow-hidden rounded-full">
+              <img
+                src="dist/img/wawan.jpg"
+                class="pointer-events-none w-full"
+                alt="wawan.jpg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Hero -->
+
+    <!-- About -->
+    <section class="about scroll-mt-[50px] dark:bg-dark" id="about">
+      <div class="container">
+        <div class="align-items-center flex flex-wrap justify-center pt-12">
+          <div class="max-w-xl px-3">
+            <div class="flex flex-col gap-y-1 text-center">
+              <h3 class="text-2xl font-bold text-primary md:text-3xl">About</h3>
+              <p
+                class="text-lg font-normal text-secondary md:text-2xl lg:text-lg"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipisicing.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="align-items-start flex flex-wrap justify-center gap-y-6 py-12"
+        >
+          <div class="w-full px-3 lg:w-1/2">
+            <div class="flex flex-col gap-y-4">
+              <h6
+                class="text-xl font-semibold text-dark dark:text-white md:text-2xl"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repudiandae, corporis.
+              </h6>
+              <p class="text-base font-normal leading-relaxed text-secondary">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure,
+                odit, repellat, perspiciatis assumenda distinctio quia
+                aspernatur similique beatae nobis rem doloribus officia et
+                incidunt illum nam vitae sequi. Commodi, mollitia!
+              </p>
+            </div>
+          </div>
+          <div class="w-full px-3 lg:w-1/2">
+            <div class="flex flex-col gap-y-4">
+              <h6
+                class="text-xl font-semibold text-dark dark:text-white md:text-2xl"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repudiandae, corporis.
+              </h6>
+              <p class="text-base font-normal leading-relaxed text-secondary">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure,
+                odit, repellat, perspiciatis assumenda distinctio quia
+                aspernatur similique beatae nobis rem doloribus officia et
+                incidunt illum nam vitae sequi. Commodi, mollitia!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of About -->
+
+    <!-- Portfolio -->
+    <section class="portfolio scroll-mt-[50px] dark:bg-dark" id="portfolio">
+      <div class="container">
+        <div class="align-items-center flex flex-wrap justify-center pt-12">
+          <div class="max-w-xl px-3">
+            <div class="flex flex-col gap-y-1 text-center">
+              <h3 class="text-2xl font-bold text-primary md:text-3xl">
+                Portfolio
+              </h3>
+              <p
+                class="text-lg font-normal text-secondary md:text-2xl lg:text-lg"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipisicing.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-y-6 py-12">
+          <div class="w-full px-3 md:w-1/2 lg:w-1/3">
+            <div
+              class="flex flex-col rounded-lg border border-secondary border-opacity-50"
+            >
+              <div class="overflow-hidden rounded-t-lg">
+                <img
+                  src="https://source.unsplash.com/600x400"
+                  class="pointer-events-none w-full"
+                  alt="unsplash"
+                />
+              </div>
+              <div class="flex flex-col gap-y-2 p-4">
+                <h6
+                  class="text-lg font-semibold text-dark dark:text-white md:text-xl lg:text-lg"
+                >
+                  Lorem ipsum dolor sit amet.
+                </h6>
+                <p class="text-base font-normal leading-relaxed text-secondary">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo
+                  alias ducimus magnam ut ab sit eveniet delectus vero? Itaque,
+                  aliquid.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-3 md:w-1/2 lg:w-1/3">
+            <div
+              class="flex flex-col rounded-lg border border-secondary border-opacity-50"
+            >
+              <div class="overflow-hidden rounded-t-lg">
+                <img
+                  src="https://source.unsplash.com/600x400"
+                  class="pointer-events-none w-full"
+                  alt="unsplash"
+                />
+              </div>
+              <div class="flex flex-col gap-y-2 p-4">
+                <h6
+                  class="text-lg font-semibold text-dark dark:text-white md:text-xl lg:text-lg"
+                >
+                  Lorem ipsum dolor sit amet.
+                </h6>
+                <p class="text-base font-normal leading-relaxed text-secondary">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo
+                  alias ducimus magnam ut ab sit eveniet delectus vero? Itaque,
+                  aliquid.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-3 md:w-1/2 lg:w-1/3">
+            <div
+              class="flex flex-col rounded-lg border border-secondary border-opacity-50"
+            >
+              <div class="overflow-hidden rounded-t-lg">
+                <img
+                  src="https://source.unsplash.com/600x400"
+                  class="pointer-events-none w-full"
+                  alt="unsplash"
+                />
+              </div>
+              <div class="flex flex-col gap-y-2 p-4">
+                <h6
+                  class="text-lg font-semibold text-dark dark:text-white md:text-xl lg:text-lg"
+                >
+                  Lorem ipsum dolor sit amet.
+                </h6>
+                <p class="text-base font-normal leading-relaxed text-secondary">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo
+                  alias ducimus magnam ut ab sit eveniet delectus vero? Itaque,
+                  aliquid.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Portfolio -->
+
+    <!-- Contact -->
+    <section class="contact scroll-mt-[50px] dark:bg-dark" id="contact">
+      <div class="container">
+        <div class="align-items-center flex flex-wrap justify-center pt-12">
+          <div class="max-w-xl px-3">
+            <div class="flex flex-col gap-y-1 text-center">
+              <h3 class="text-2xl font-bold text-primary md:text-3xl">
+                Contact
+              </h3>
+              <p
+                class="text-lg font-normal text-secondary md:text-2xl lg:text-lg"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipisicing.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center justify-center py-12">
+          <div class="w-full px-3 lg:w-1/2">
+            <form action="#">
+              <div class="mb-4">
+                <label
+                  class="mb-2 inline-block text-base font-medium text-secondary md:text-lg lg:text-base"
+                  for="name"
+                  >Name</label
+                >
+                <input
+                  class="block w-full rounded-md bg-slate-200 px-3 py-[6px] text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                  id="name"
+                  name="name"
+                  type="text"
+                />
+              </div>
+              <div class="mb-4">
+                <label
+                  class="mb-2 inline-block text-base font-medium text-secondary md:text-lg lg:text-base"
+                  for="email"
+                  >Email</label
+                >
+                <input
+                  class="block w-full rounded-md bg-slate-200 px-3 py-[6px] text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                  id="email"
+                  name="email"
+                  type="text"
+                />
+              </div>
+              <div class="mb-4">
+                <label
+                  class="mb-2 inline-block text-base font-medium text-secondary md:text-lg lg:text-base"
+                  for="message"
+                  >Message</label
+                >
+                <textarea
+                  class="focus:border-primar block w-full rounded-md bg-slate-200 px-3 py-[6px] text-dark focus:outline-none focus:ring-1 focus:ring-primary"
+                  id="message"
+                  maxlength="300"
+                  name="message"
+                  rows="5"
+                ></textarea>
+              </div>
+              <button
+                class="self-start rounded-md bg-primary px-4 py-2 text-base font-medium text-white transition duration-200 ease-in-out hover:opacity-80 md:text-lg lg:text-base"
+                type="submit"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Contact -->
+
+    <!-- Footer -->
+    <footer class="footer border-t border-secondary border-opacity-50 bg-dark">
+      <div class="container">
+        <div class="flex flex-wrap py-6">
+          <div class="w-full px-3">
+            <div class="text-center text-white">
+              <p>
+                Copyright &copy;
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                StarWord. All Rights Reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End of Footer -->
+
+    <script src="dist/js/script.js"></script>
+  </body>
+</html>
