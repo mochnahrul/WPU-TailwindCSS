@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Features</title>
+    <link rel="stylesheet" href="dist/output.css" />
+  </head>
+  <body>
+    <h1 class="text-primary text-center text-4xl font-bold">Hello World</h1>
+
+    <div class="box mx-auto mt-10 flex">
+      <p class="m-auto">Box</p>
+    </div>
+
+    <!-- Colors Theme -->
+    <div
+      class="bg-theme/10 mx-auto mt-10 flex w-80 flex-col items-center justify-start gap-y-8 rounded-lg p-8 shadow-lg"
+    >
+      <h3 class="text-theme/100 text-center text-2xl font-semibold">My Form</h3>
+      <form action="#">
+        <div class="mb-4">
+          <label
+            class="text-theme/80 mb-2 inline-block text-base font-medium"
+            for="email"
+            >Email</label
+          >
+          <input
+            class="focus:ring-theme/40 block w-full rounded-md border px-3 py-[6px] transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2"
+            id="email"
+            name="email"
+            type="text"
+          />
+        </div>
+        <div class="flex flex-row items-center justify-center">
+          <button
+            class="bg-theme/80 hover:bg-theme/100 rounded-md px-4 py-2 text-base font-medium text-white transition duration-200 ease-in-out"
+            type="submit"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+    <!-- End of Colors Theme -->
+
+    <!-- Arbitrary Variant -->
+    <ul
+      class="mx-auto my-10 flex w-80 flex-col gap-y-4 [&>li:nth-child(3)]:bg-teal-500 [&>li:nth-child(4):hover>div>span:nth-child(2)]:bg-pink-500"
+    >
+      <li class="rounded-lg bg-teal-100 p-4 text-base">Item 1</li>
+      <li class="rounded-lg bg-teal-100 p-4 text-base">Item 2</li>
+      <li class="rounded-lg bg-teal-100 p-4 text-base">Item 3</li>
+      <li class="rounded-lg bg-teal-100 p-4 text-base">
+        <div class="flex flex-row items-center justify-center gap-x-2">
+          <span class="rounded-md bg-violet-500 px-4 py-2">1</span>
+          <span class="rounded-md bg-violet-500 px-4 py-2">2</span>
+          <span class="rounded-md bg-violet-500 px-4 py-2">3</span>
+        </div>
+      </li>
+      <li class="rounded-lg bg-teal-100 p-4 text-base">Item 5</li>
+    </ul>
+    <!-- End of Arbitrary Variant -->
+  </body>
+</html>

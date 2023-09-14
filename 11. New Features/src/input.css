@@ -1,0 +1,13 @@
+:root {
+  --cyan: 6 182 212;
+  --colors-theme: var(--cyan);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.box {
+  @apply bg-primary h-20 w-20;
+  background-color: theme(colors.primary / 50%);
+}
